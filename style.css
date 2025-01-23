@@ -8,8 +8,8 @@ body {
 
 #sandCanvas {
     background-color: black;
-    width: 512px;
-    height: 512px;
+    width: 1000px;
+    height: 1000px;
     image-rendering: pixelated;
     cursor: none;
     user-select: none;
