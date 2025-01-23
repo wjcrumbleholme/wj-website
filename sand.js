@@ -113,6 +113,7 @@ function updateParticles() {
     //Then check if there is room under the particle for it to move
         //If there is, move the particle there
         //If there isnt, leave the particle in place
+    //Then check if there is room either side for it to move
 
     for (i = (gameHeight/unitSize) - 1; i >= 0; i--) { //Rows btm to top
         for(j = 0; j < (gameWidth/unitSize); j++) { //Column in that row left to right
@@ -122,8 +123,17 @@ function updateParticles() {
                     particles[i][j] = null; //Set the space where it was empty
                     particles[i+1][j].y += unitSize; //Move it down by 1 unit
                     // console.log("nothing under ere");
-                } else { //This means that there is a particle underneath, so dont move
+                } else if (i + 1 < (gameHeight / unitSize) && j > 0 && particles[i+1][j - 1] == null) { //Can move to the left underneath
+                    particles[i+1][j-1] = particles[i][j]; //Copy particle down and to left
+                    particles[i][j] = null; //Set the space where it was empty
+                    particles[i+1][j-1].y += unitSize; //Move it down by 1 unit
+                    particles[i+1][j-1].x -= unitSize; //Move it left by 1 unit
                     continue;
+                } else if (i + 1 < (gameHeight / unitSize) && j < (gameWidth / unitSize) && particles[i+1][j + 1] == null) { //Can it move to the right and underneath
+                    particles[i+1][j+1] = particles[i][j]; //Copy particle down and to left
+                    particles[i][j] = null; //Set the space where it was empty
+                    particles[i+1][j+1].y += unitSize; //Move it down by 1 unit
+                    particles[i+1][j+1].x += unitSize; //Move it right by 1 unit
                 }
             } 
         };
