@@ -1,0 +1,16 @@
+body {
+    color: white;
+    display: flex;
+    justify-content: center;
+    background-color: #171d29; /*#10141c*/
+    font-family:'Courier New', Courier, monospace
+}
+
+#sandCanvas {
+    background-color: black;
+    width: 1000px;
+    height: 1000px;
+    image-rendering: pixelated;
+    cursor: none;
+    user-select: none;
+}

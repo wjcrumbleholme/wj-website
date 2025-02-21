@@ -31,7 +31,9 @@ canvas.addEventListener("mousemove", (event) => {
     }
 });
 
+
 canvas.addEventListener("mousedown", (event) => {
+    console.log("mousedown");
     isDragging = true;
     spawnSand(event);
 });
