@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Example Project</title>
-    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="../projects/assets/project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b597d89dd9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <!-- Nav Bar -->
+    <nav class="navbar", role="navigation" aria-label="Main Navigation">
+        <div class="navbar__container">
+            <a href="/" id="navbar-logo">wjcrumbleholme</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/projects/example.html" class="navbar__links">projects</a>
+                </li>
+            </ul>
+
+            <button class="navbar__toggle" id="mobile-menu" aria-label="Toggle Navigation" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="main__container">
+            <div class="info__sect">
+                <img src="../images/test.svg" alt="Example" class="project__main-img">
+                <h1 class="project__main-title">Example</h1>
+                <p class="project__main-short-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <script src="../projects/assets/project.js"></script>
 </body>
 </html>
